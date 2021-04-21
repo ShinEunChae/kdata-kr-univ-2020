@@ -1,0 +1,28 @@
+{
+  "mark": "bar",
+  "encoding": {
+    "x": {"field": "sex", "type": "nominal"},
+    "y": {"field": "tip", "type": "quantitative"}
+  },
+  "$schema": "https://vega.github.io/schema/vega-lite/v2.json",
+  "width": 450,
+  "height": 300,
+  "selection": {
+    "grid": {
+      "type": "interval",
+      "bind": "scales",
+      "on": "[mousedown, window:mouseup] > window:mousemove!",
+      "encodings": ["x", "y"],
+      "translate": "[mousedown, window:mouseup] > window:mousemove!",
+      "zoom": "wheel!",
+      "mark": {"fill": "#333", "fillOpacity": 0.125, "stroke": "white"},
+      "resolve": "global"
+    }
+  },
+  "data": {
+    "values": [
+      {"sex": "Male", "tip": 3.0896178343949052},
+      {"sex": "Female", "tip": 2.833448275862069}
+    ]
+  }
+}
